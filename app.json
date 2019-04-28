@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/shop/shop",
+    "pages/mine/mine",
+    "pages/project/project",
+    "pages/recreation/recreation",
+    "pages/flower/flower"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "black",
+    "selectedColor": "#1296db",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/icon_index_press.png",
+        "iconPath": "images/icon_index.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/icon_flower_press.png",
+        "iconPath": "images/icon_flower.png",
+        "pagePath": "pages/flower/flower",
+        "text": "fafa"
+      },
+      {
+        "selectedIconPath": "images/icon_recreation_press.png",
+        "iconPath": "images/icon_recreation.png",
+        "pagePath": "pages/recreation/recreation",
+        "text": "扩展"
+      },
+      {
+        "selectedIconPath": "images/icon_shop_press.png",
+        "iconPath": "images/icon_shop.png",
+        "pagePath": "pages/shop/shop",
+        "text": "购物"
+      },
+      {
+        "selectedIconPath": "images/icon_mine_press.png",
+        "iconPath": "images/icon_mine.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  }
+}

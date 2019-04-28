@@ -1,0 +1,19 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="iconViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class='list' wx:for="{{list}}" wx:key="id">
+    <view bindtap="itemViewTap" data-id="{{item.id}}"><!--url='../item/item?name={{item.name}}'-->
+      <view class='item'>
+        <image class='icon' src='{{item.images}}'></image>
+        <text class='name'>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+  
+</view>

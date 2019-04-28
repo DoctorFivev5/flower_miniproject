@@ -1,0 +1,43 @@
+/* pages/mine/mine.wxss */
+.userinfo {
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: flex-start; */
+  /* cursor: pointer; */
+  border-bottom: 1rpx solid #ccc;
+  background-color: #0387FE;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  /* 圆角 */
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  
+  color: #aaa;
+  margin-top: 70rpx;
+}
+
+.list{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.item{
+  display: flex;
+  padding: 20rpx 40rpx;
+  border-bottom: 1rpx solid #eee;
+  cursor: pointer;
+}
+.icon{
+  width: 80rpx;
+  height: 80rpx;
+}
+.name{
+  margin-top: 17rpx;
+}
+
