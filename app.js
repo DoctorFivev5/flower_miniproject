@@ -1,11 +1,11 @@
 //app.js
 App({
   onLaunch: function () {
-    const addr = "http://192.168.0.1/miniprogramtest";
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    // // 展示本地存储能力
+    // wx.setStorage({
+    //   key: 'baseUrl',
+    //   data: addr,
+    // })
 
     // 登录
     wx.login({
@@ -14,9 +14,9 @@ App({
         console.log(res)
         console.log(res.code)
         if(res.code){
-          let url1 = addr+"/user/login";
+          let url1 = this.globalData.baseUrl+"/user/login";
           let data1 = {
-            js_code : res.code
+            openid : res.code
           }
           wx.request({
             url: url1,
@@ -27,15 +27,7 @@ App({
             },
             success: function (res) {
               console.log(res.data);
-              // 赋值
-              // _this.setData({
-              //   title: res.data.title,
-              //   list: res.data.subjects,
-              //   type: "top250",
-              //   loading: false // 关闭等待框
-              // })
-            }
-                    
+            }          
           })
         }
       }
@@ -62,6 +54,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    baseUrl: "http://localhost/flower"//"http://192.168.0.1/flower"
   }
 })

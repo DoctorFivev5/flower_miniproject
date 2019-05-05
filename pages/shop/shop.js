@@ -17,7 +17,7 @@ Page({
   onLoad: function () { // options 为 board页传来的参数
     const _this = this;
     // 拼接请求url
-    const url = "http://192.168.0.1/miniprogramtest/test";
+    const url = "http://localhost/flower/test";
       // 请求数据
       wx.request({
         url: url,

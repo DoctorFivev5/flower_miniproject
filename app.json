@@ -6,7 +6,8 @@
     "pages/mine/mine",
     "pages/project/project",
     "pages/recreation/recreation",
-    "pages/flower/flower"
+    "pages/flower/flower",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -15,7 +16,7 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "black",
+    "color": "#000000",
     "selectedColor": "#1296db",
     "borderStyle": "black",
     "list": [

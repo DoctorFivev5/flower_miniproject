@@ -1,10 +1,43 @@
-<!--pages/obtaining/obtaining.wxml-->
-<view class='page_row' bindtap="suo">  
+<loading hidden="{{hidd_load}}">加载中</loading>
+<view class='page_row'>  
       <view class="search">  
         <view class="df search_arr">  
-          <icon class="searchcion" size='20' type='search'></icon>  
-          <input class="" disabled placeholder="请输入关键字" value="{{searchValue}}"/>  
+        <form bindsubmit='searchSubmit'>
+          <icon class="searchicon" size='20' type='search'></icon>  
+          <input class="search_str" confirm-type='search' placeholder="{{tip}}" value="{{searchValue}}" bindconfirm='bindSearchByWord'/> 
+        </form>
         </view>  
       </view>  
-      <view class='sousuo'>搜索</view>  
 </view>
+
+<scroll-view class="scroll_type" scroll-x="true">
+        <view class="type_item" bindtap='bindFindProductByType' data-type='{{dataType[0]}}'>全部</view>
+        <view class="type_item" bindtap='bindFindProductByType' data-type='{{dataType[1]}}'>鲜花花束</view>
+        <view class="type_item" bindtap='bindFindProductByType' data-type='{{dataType[2]}}'>鲜花</view>
+        <view class="type_item" bindtap='bindFindProductByType' data-type='{{dataType[3]}}'>永生花</view>
+        <view class="type_item" bindtap='bindFindProductByType' data-type='{{dataType[4]}}'>绿植</view>
+        <view class="type_item" bindtap='bindFindProductByType' data-type='{{dataType[5]}}'>小饰品</view>
+        <view class="type_item" bindtap='bindFindProductByType' data-type='{{dataType[6]}}'>彩纸</view>
+</scroll-view>
+
+
+<scroll-view class='scroll_product' scroll-y="true">
+  <view class="card" wx:for='{{productData}}' wx:key='id'>
+  <navigator url='../detail/detail?id={{item.id}}'>
+    <view >
+        <image class="image" mode="aspectFill" src="{{item.image[0]}}"/>
+        <text class="time">时间</text>
+        <view class="title">{{item.name}}</view>
+        <view class='price'>￥{{item.price}}</view>
+        <view class='extra'>{{item.introduce}}</view>
+    </view>
+  </navigator>
+  </view>
+  <view wx:if="{{productData==''}}">
+    <view class='tip'>该分类暂无数据</view>
+  </view>
+  <view wx:else>
+    <view class='tip'>已经到底啦</view>
+  </view>
+</scroll-view>
+
