@@ -1,13 +1,17 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+var util = require('../../utils/util.js');
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    imgUrls: ["http://localhost/flower/image/meigui.jpg","http://localhost/flower/image/meigui.jpg"],
+    week: "周一",
+    indicatorDots: true, //是否显示面板指示点
+    autoplay: true, //是否自动切换
+    interval: 3000, //自动切换时间间隔,3s
+    duration: 1000, //  滑动动画时长1s
+    productData: [],
+    baseUrl: getApp().globalData.baseUrl
   },
   //事件处理函数
   bindViewTap: function() {
@@ -15,40 +19,42 @@ Page({
       url: '../logs/logs'
     })
   },
+  getWeek(){
+    const weekNum = new Date().getDay();
+    var str = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+    this.setData({
+      week: str[weekNum]
+    })
+  },
+  //预览图片
+  previewImage: function (e) {
+    var current = e.target.dataset.src;
+
+    wx.previewImage({
+      current: current, // 当前显示图片的http链接  
+      urls: this.data.imgUrls // 需要预览的图片http链接列表  
+    })
+  },
   onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
+    var _this = this;
+    const weekNum = new Date().getDay();
+    var str = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+    _this.setData({
+      week: str[weekNum]
+    })
+    wx.request({
+      url: _this.data.baseUrl + "/product/type",
+      data: { type: weekNum },
+      header: {
+        "content-type": "json" // 默认值
+      },
+      success: function (res) {
+        console.log(res.data);
+        // 赋值
+        _this.setData({
+          productData: res.data.data,
         })
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
     })
   }
 })

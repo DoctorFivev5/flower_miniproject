@@ -8,8 +8,7 @@ swiper {
   height: 500rpx;
 }
 swiper-item image {
-  width: 100%;
-  height: 100%;
+   width: 100%;
 }
 .detail {
   display: flex;
@@ -67,6 +66,7 @@ swiper-item image {
 }
 .image_detail {
   width: 100%;
+  height: 200px;
 }
 button {
   color: white;

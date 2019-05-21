@@ -14,6 +14,11 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const formatWeek = date =>{
+  const week = date.getDay();
+  return week;
+}
+
 module.exports = {
   formatTime: formatTime
 }

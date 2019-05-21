@@ -13,8 +13,9 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         console.log(res)
         console.log(res.code)
+        var _this = this;
         if(res.code){
-          let url1 = this.globalData.baseUrl+"/user/login";
+          let url1 = _this.globalData.baseUrl+"/user/login";
           let data1 = {
             openid : res.code
           }
@@ -27,6 +28,7 @@ App({
             },
             success: function (res) {
               console.log(res.data);
+              _this.globalData.myUserInfo = res.data.data[0]
             }          
           })
         }
@@ -55,6 +57,7 @@ App({
   },
   globalData: {
     userInfo: null,
+    myUserInfo:null,
     baseUrl: "http://localhost/flower"//"http://192.168.0.1/flower"
   }
 })

@@ -1,4 +1,6 @@
-/* pages/list/list.wxss */
+.container{
+  margin-bottom: 100rpx;
+}
 .page-header {
   display: flex;
   /*justify-content:space-around;/*center:水平居中,flex-start:靠左;flex-end:靠右；space-between:两边的向两边靠，中间等分；space-around:完美的平均分配*/
@@ -19,7 +21,7 @@
 }
 .item {
   display: flex;
-  padding: 20rpx 40rpx;
+  padding: 20rpx 20rpx;
   border-bottom: 1rpx solid #eee;
   cursor: pointer;
 }
@@ -64,4 +66,95 @@
 }
 .tips image,.tips text {
   vertical-align: middle;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.row .quantity-position {
+  position: absolute;
+  right: 60rpx;
+  text-align: center;
+}
+.stepper {
+	width: 202rpx;
+	height: 60rpx;
+	/*给主容器设一个边框*/
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin:0 auto;
+}
+ 
+/*加号和减号*/
+.stepper text {
+	width: 60rpx;
+	height: 60rpx;
+	text-align: center;
+	float: left;
+  display: block;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  margin: 0 auto;
+}
+ 
+/*数值*/
+.stepper input {
+	width: 80rpx;
+	height: 60rpx;
+	float: left;
+	margin: 0 auto;
+	text-align: center;
+
+	/*给中间的input设置左右边框即可*/
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+ 
+/*普通样式*/
+.stepper .normal{
+	color: black;
+}
+ 
+/*禁用样式*/
+.stepper .disabled{
+	color: #ccc;
+}
+.bottom checkbox{
+  padding-left: 20rpx;
+  align-items: center;
+  border-radius: 50%
+}
+.bottom{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  float: left;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100rpx;
+}
+button {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30rpx;
+  border-radius: 0rpx;
+  width: 50%;
+  height: 100%;
+  line-height: 100rpx;
+}
+.button-red {
+  bottom: 0;
+  background-color: #f44336; /* 红色 */
+  margin-right: 0rpx;
+}
+.price-all {
+  bottom: 0;
+  padding-left: 30rpx;
 }

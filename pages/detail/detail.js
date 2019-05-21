@@ -103,7 +103,8 @@ Page({
       url: _this.data.baseUrl + '/shopCar/addShopCar',
       data: {
         productId: _this.data.product.id ,
-        number: _this.data.num
+        number: _this.data.num,
+        userId: getApp().globalData.myUserInfo.id
       },
       header: {
         "content-type": "json" // 默认值
