@@ -1,0 +1,35 @@
+.suggestion {
+  border: 1px solid #eee;
+  width: 650rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  font-size: 30rpx;
+  padding-left: 10rpx;
+  padding-top: 20rpx;
+  background: #fff;
+  border-radius: 20rpx;
+}
+
+page {
+  background: #eee;
+}
+
+.phone {
+  background-color: #fff;
+  width: 650rpx;
+  margin: 0 auto;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding-left: 10rpx;
+  border-radius: 10rpx;
+}
+
+.submit {
+  background: orange;
+  color: #fff;
+  width: 650rpx;
+  margin: 0 auto;
+}

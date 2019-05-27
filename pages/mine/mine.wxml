@@ -7,13 +7,17 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class='list' wx:for="{{list}}" wx:key="id">
-    <view bindtap="itemViewTap" data-id="{{item.id}}"><!--url='../item/item?name={{item.name}}'-->
-      <view class='item'>
-        <image class='icon' src='{{item.images}}'></image>
-        <text class='name'>{{item.name}}</text>
-      </view>
+  <view class="orderList">
+    <view class="order-container" wx:for="{{orderList}}" wx:key="id" data-id="{{item.id}}" bindtap="toOrderTap" >
+      <image class="order-image" src="{{item.images}}" />
+      <text class="order-text">{{item.name}}</text>
     </view>
   </view>
-  
+  <view class="functionArea" >
+    <view class='list' wx:for="{{list}}" wx:key="id" bindtap="itemViewTap" data-id="{{item.id}}"><!--url='../item/item?name={{item.name}}'-->
+      <image class='icon' src='{{item.images}}'></image>
+      <text class='name'>{{item.name}}</text>
+      <image class="arrow" src="/images/arrow.png"></image>
+    </view>
+  </view>
 </view>

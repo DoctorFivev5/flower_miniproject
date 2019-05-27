@@ -1,0 +1,5 @@
+<form bindsubmit="send">
+  <textarea class="suggestion" placeholder="请留下您的宝贵意见或建议, 我们将努力改进" name="advice"></textarea>
+  <input type="number" class="phone" name="phone" placeholder="请留下手机号码, 以便我们回复您" />
+  <button form-type="submit" class="submit">提交</button>
+</form>

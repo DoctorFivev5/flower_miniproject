@@ -1,0 +1,49 @@
+form {
+  font-size: 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+input {
+  padding: 20rpx 0;
+  padding-left: 110rpx;
+}
+
+.submit {
+  outline: none;
+  position: static;
+  border: 1px solid #0387FE;
+  border-radius: 20rpx;
+  width: 30%;
+  margin: 0 auto;
+  font-size: 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.phoneImg {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 100rpx;
+  left: 0;
+  padding-left: 30rpx;
+}
+
+.addressImg {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 200rpx;
+  left: 0;
+  padding-left: 30rpx;
+}
+
+.user {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 0;
+  padding-left: 30rpx;
+}

@@ -11,43 +11,67 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    orderList: [
+      {
+        id: "1",
+        images: "/images/cancel.png",
+        name: "已取消"
+      },
+      {
+        id: "2",
+        images: "/images/noPayBlue.png",
+        name: "待付款",
+      },
+      {
+        id: "3",
+        images: "/images/noGetBlue.png",
+        name: "代签收",
+      },
+      {
+        id: "4",
+        images: "/images/noCommentBlue.png",
+        name: "未评价"
+      },
+      {
+        id: "5",
+        images: "/images/finishedBlue.png",
+        name: "已完成"
+      },
+      {
+        id: "0",
+        images: "/images/orderBlue.png",
+        name: "全部",
+      },
+    ],
     list: [
       {
-        id:"message",
-        images:"/images/icon_message.png",
-        name:"我的消息"},
-      {
-        id: "star",
-        images:"/images/icon_star.png",
-        name:"我的星星"},
-      {
-        id: "completed",
-        images: "/images/icon_completed.png",
-        name:"已捐项目"},
-      {
-        id: "about_us",
-        images: "/images/icon_about_us.png",
-        name:"关于我们"},
+        id: "address",
+        images:"/images/user_address.png",
+        name:"我的地址"
+      },
       {
         id: "advice",
-        images: "/images/icon_advice.png",
-        name:"意见反馈"},
+        images: "/images/comment.png",
+        name:"意见反馈"
+      },
       {
-        id: "setting",
-        images: "/images/icon_setting.png",
-        name:"设置"
-      }]
+        id: "about_us",
+        images: "/images/aboutUs.png",
+        name:"关于我们"
+      }
+    ]
   },
   //点击头像事件
-  iconViewTap: function () {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
+  // iconViewTap: function () {
+  //   wx.navigateTo({
+  //     url: '../logs/logs'
+  //   })
+  // },
   //点击item事件
   itemViewTap: function (event) {
+    const { id: navigateId } = event.currentTarget.dataset;
     wx.navigateTo({
-      url: '../' + event.currentTarget.dataset.id + '/' + event.currentTarget.dataset.id
+      url: `../${navigateId}/${navigateId}`
     })
   },
   /**
@@ -89,6 +113,14 @@ Page({
       hasUserInfo: true
     })
   },
+
+  toOrderTap: (e) => {
+    const { id } = e && e.currentTarget && e.currentTarget.dataset;
+    wx.navigateTo({
+      url: `../order/order?current=${id}`
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -1,0 +1,13 @@
+<view>
+  <view class="headBox">
+    <image src="{{avatar}}" class="logo" />
+  </view>
+  <view class="authorizeMsg">
+    <view class="authorizeMsg-team">该小程序由 XXX 小组开发,向其提供以下权限即可继续操作</view>
+    <view class="authorizeMsg-command">获取你的公开信息(昵称、头像等)</view>
+    <view class="authorizeMsgbefore"></view>
+  </view>
+  <view class="authorizeMsg-buttonContent">
+    <button class="authorizeMsg-button" open-type="getUserInfo" bindgetuserinfo="toIndex" >确认授权</button>
+  </view>
+</view>

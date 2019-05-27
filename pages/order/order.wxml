@@ -1,0 +1,213 @@
+<!-- pages/order/order.wxml -->
+
+<view class="container" >
+  <view class="swiper-tab">
+      <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">全部</view>
+      <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">已取消</view>
+      <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">待付款</view>
+      <view class="swiper-tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="clickTab">代签收</view>
+      <view class="swiper-tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="clickTab">待评价</view>
+      <view class="swiper-tab-item {{currentTab==5?'active':''}}" data-current="5" bindtap="clickTab">已完成</view>
+  </view>
+
+  <swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab">
+      <swiper-item>
+        <view class="item-container" wx:for="{{allList}}" wx:key="{{Math.Random()}}" wx:for-item="item">
+          <view class="item-top">
+            <text >{{item.type}}</text>  
+          </view>
+          <view class="product-container1">
+            <view class="product-container" wx:for="{{item.productList}}" wx:for-item="product" wx:key="Math.random()">
+              <view class="product">
+                <view class="pic-title"></view>
+                <image class="product-img" src="{{product.image}}" />
+              </view>
+              <view class="content">
+                <view class="content-title">{{product.name}}</view>
+                <view class="product-detail">
+                  <text class="product-money">￥ {{product.money}}</text>
+                  <text class="product-count">x {{product.count}}</text>
+                </view>
+              </view>
+              <view class="product-footer">
+                <view class="product-all">
+                  <text class="count">共{{product.count}}件商品 </text>
+                  <text class="money">合计: ￥<text class="moneyDetail">{{item.total}}</text></text>
+                </view>
+                <view class="button-container">
+                  <button class="delete">删除订单</button>
+                  <button class="delete">查看物流</button>
+                  <button class="comment">评价</button>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="item-container" wx:for="{{fail}}" wx:key="{{Math.Random()}}" wx:for-item="item">
+          <view class="item-top">
+            <text >{{item.type}}</text>  
+          </view>
+          <view class="product-container1">
+            <view class="product-container" wx:for="{{item.productList}}" wx:for-item="product" wx:key="Math.random()">
+              <view class="product">
+                <view class="pic-title"></view>
+                <image class="product-img" src="{{product.image}}" />
+              </view>
+              <view class="content">
+                <view class="content-title">{{product.name}}</view>
+                <view class="product-detail">
+                  <text class="product-money">￥ {{product.money}}</text>
+                  <text class="product-count">x {{product.count}}</text>
+                </view>
+              </view>
+              <view class="product-footer">
+                <view class="product-all">
+                  <text class="count">共{{product.count}}件商品 </text>
+                  <text class="money">合计: ￥<text class="moneyDetail">{{item.total}}</text></text>
+                </view>
+                <view class="button-container">
+                  <button class="delete">删除订单</button>
+                  <button class="delete">查看物流</button>
+                  <button class="comment">评价</button>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="item-container" wx:for="{{noPayList}}" wx:key="{{Math.Random()}}" wx:for-item="item">
+          <view class="item-top">
+            <text >{{item.type}}</text>  
+          </view>
+          <view class="product-container1">
+            <view class="product-container" wx:for="{{item.productList}}" wx:for-item="product" wx:key="Math.random()">
+              <view class="product">
+                <view class="pic-title"></view>
+                <image class="product-img" src="{{product.image}}" />
+              </view>
+              <view class="content">
+                <view class="content-title">{{product.name}}</view>
+                <view class="product-detail">
+                  <text class="product-money">￥ {{product.money}}</text>
+                  <text class="product-count">x {{product.count}}</text>
+                </view>
+              </view>
+              <view class="product-footer">
+                <view class="product-all">
+                  <text class="count">共{{product.count}}件商品 </text>
+                  <text class="money">合计: ￥<text class="moneyDetail">{{item.total}}</text></text>
+                </view>
+                <view class="button-container">
+                  <button class="delete">删除订单</button>
+                  <button class="delete">查看物流</button>
+                  <button class="comment">评价</button>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="item-container" wx:for="{{noGetList}}" wx:key="{{Math.Random()}}" wx:for-item="item">
+          <view class="item-top">
+            <text >{{item.type}}</text>  
+          </view>
+          <view class="product-container1">
+            <view class="product-container" wx:for="{{item.productList}}" wx:for-item="product" wx:key="Math.random()">
+              <view class="product">
+                <view class="pic-title"></view>
+                <image class="product-img" src="{{product.image}}" />
+              </view>
+              <view class="content">
+                <view class="content-title">{{product.name}}</view>
+                <view class="product-detail">
+                  <text class="product-money">￥ {{product.money}}</text>
+                  <text class="product-count">x {{product.count}}</text>
+                </view>
+              </view>
+              <view class="product-footer">
+                <view class="product-all">
+                  <text class="count">共{{product.count}}件商品 </text>
+                  <text class="money">合计: ￥<text class="moneyDetail">{{item.total}}</text></text>
+                </view>
+                <view class="button-container">
+                  <button class="delete">删除订单</button>
+                  <button class="delete">查看物流</button>
+                  <button class="comment">评价</button>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="item-container" wx:for="{{noCommentList}}" wx:key="{{Math.Random()}}" wx:for-item="item">
+          <view class="item-top">
+            <text >{{item.type}}</text>  
+          </view>
+          <view class="product-container1">
+            <view class="product-container" wx:for="{{item.productList}}" wx:for-item="product" wx:key="Math.random()">
+              <view class="product">
+                <view class="pic-title"></view>
+                <image class="product-img" src="{{product.image}}" />
+              </view>
+              <view class="content">
+                <view class="content-title">{{product.name}}</view>
+                <view class="product-detail">
+                  <text class="product-money">￥ {{product.money}}</text>
+                  <text class="product-count">x {{product.count}}</text>
+                </view>
+              </view>
+              <view class="product-footer">
+                <view class="product-all">
+                  <text class="count">共{{product.count}}件商品 </text>
+                  <text class="money">合计: ￥<text class="moneyDetail">{{item.total}}</text></text>
+                </view>
+                <view class="button-container">
+                  <button class="delete">删除订单</button>
+                  <button class="delete">查看物流</button>
+                  <button class="comment">评价</button>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="item-container" wx:for="{{finishedList}}" wx:key="{{Math.Random()}}" wx:for-item="item">
+          <view class="item-top">
+            <text >{{item.type}}</text>  
+          </view>
+          <view class="product-container1">
+            <view class="product-container" wx:for="{{item.productList}}" wx:for-item="product" wx:key="Math.random()">
+              <view class="product">
+                <view class="pic-title"></view>
+                <image class="product-img" src="{{product.image}}" />
+              </view>
+              <view class="content">
+                <view class="content-title">{{product.name}}</view>
+                <view class="product-detail">
+                  <text class="product-money">￥ {{product.money}}</text>
+                  <text class="product-count">x {{product.count}}</text>
+                </view>
+              </view>
+              <view class="product-footer">
+                <view class="product-all">
+                  <text class="count">共{{product.count}}件商品 </text>
+                  <text class="money">合计: ￥<text class="moneyDetail">{{item.total}}</text></text>
+                </view>
+                <view class="button-container">
+                  <button class="delete">删除订单</button>
+                  <button class="delete">查看物流</button>
+                  <button class="comment">评价</button>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+  </swiper>
+</view>
