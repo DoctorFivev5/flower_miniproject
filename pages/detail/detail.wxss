@@ -57,11 +57,11 @@ swiper-item image {
   height: 100rpx;
 }
 .button-green {
-  bottom: 0;
+  /* bottom: 0; */
   background-color: #4caf50; /* Green */
 }
 .button-red {
-  bottom: 0;
+  /* bottom: 0; */
   background-color: #f44336; /* 红色 */
 }
 .image_detail {

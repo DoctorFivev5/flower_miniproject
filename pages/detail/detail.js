@@ -44,9 +44,17 @@ Page({
     })
   },
   // 立即购买
-  immeBuy() {
+  toastBuy() {
     wx.showToast({
       title: '购买成功',
+      icon: 'success',
+      duration: 2000
+    });
+  },
+  // 加入购物车成功
+  toastShopCar() {
+    wx.showToast({
+      title: '加入购物车成功',
       icon: 'success',
       duration: 2000
     });
@@ -113,6 +121,16 @@ Page({
         console.log(res.data);
         //响应添加购物车成功
       }
+    })
+    _this.closeDialog();
+    _this.toastShopCar();
+  },
+  buy(){
+    var _this = this;
+    var id = _this.data.product.id;
+    var number = _this.data.num;
+    wx.navigateTo({
+      url: '../buy/buy?id='+id+'&number='+number
     })
   },
   /**

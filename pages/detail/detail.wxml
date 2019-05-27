@@ -43,7 +43,10 @@
       </view>
       <view class="border-line"></view>
       <button class="button-green" bindtap="addCar" formType="submit">加入购物车</button>
-      <button class="button-red" formType="submit">立即购买</button>
+      <!-- 跳转到购买界面 -->
+      <!-- <navigator url='../buy/buy?id={{product.id}}&number={{num}}'> -->
+        <button class="button-red" bindtap='buy' formType="submit">立即购买</button>
+      <!-- </navigator> -->
     </view>
   </view>
 
@@ -64,5 +67,7 @@
   <view class="line_nav"></view>
   <image bindtap="addLike" src="{{isLike?'../../images/icon_heart_press.png':'../../images/icon_heart.png'}}" />
   <button class="button-green" bindtap="addCar" formType="submit">加入购物车</button>
-  <button class="button-red" bindtap="immeBuy" formType="submit">立即购买</button>
+  <!-- <navigator class='navigator-red' url='../buy/buy?id={{product.id}}&number={{num}}'> -->
+    <button class="button-red" bindtap='buy' formType="submit">立即购买</button>
+  <!-- </navigator> -->
 </view>

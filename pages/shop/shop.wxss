@@ -78,7 +78,7 @@
   text-align: center;
 }
 .stepper {
-	width: 202rpx;
+	width: 206rpx;
 	height: 60rpx;
 	/*给主容器设一个边框*/
 	border: 1px solid #ccc;
@@ -105,7 +105,7 @@
 	float: left;
 	margin: 0 auto;
 	text-align: center;
-
+  readonly: readonly;
 	/*给中间的input设置左右边框即可*/
 	border-left: 1px solid #ccc;
 	border-right: 1px solid #ccc;

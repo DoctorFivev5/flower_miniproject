@@ -7,7 +7,7 @@
   <view class='page-body' wx:for="{{list}}" wx:key="id">
     <!--类型判断,显示不同的数据-->
     <view class='item'>
-    <checkbox class='checkbox' value='{{index}}' checked='{{item.selected==1?true:false}}'>{{index}}</checkbox>
+    <checkbox class='checkbox' value='{{index}}' checked='{{item.selected==1?true:false}}'></checkbox>
     <navigator url='../detail/detail?id={{item.id}}'>
       <image class='poster' src='{{item.image[0]}}'></image>
       </navigator>
@@ -19,7 +19,7 @@
         </view>
         <view class='rating'>
           <view class="row">
-            <text >购买数量</text>
+            <text>购买数量</text>
             <view class="quantity-position">
               <view class="stepper">
                 <!-- 减号 -->
@@ -39,8 +39,9 @@
 </view>
 <!-- 底部悬浮栏 -->
 <view class="bottom">
-  <checkbox checked='{{checkAll}}'>全选</checkbox>
-
+<checkbox-group bindchange="checkboxAllChange">
+  <checkbox checked='{{checkAll==1?true:false}}'>全选</checkbox>
+</checkbox-group>
 
   <text class='price-all'>￥{{priceAll}}</text>
   <button class="button-red" bindtap="immeBuy" formType="submit">立即购买</button>
