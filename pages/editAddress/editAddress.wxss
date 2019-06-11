@@ -11,7 +11,9 @@ input {
 
 .submit {
   outline: none;
-  position: static;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   border: 1px solid #0387FE;
   border-radius: 20rpx;
   width: 30%;
@@ -34,7 +36,7 @@ input {
   width: 60rpx;
   height: 60rpx;
   position: absolute;
-  top: 200rpx;
+  top: 480rpx;
   left: 0;
   padding-left: 30rpx;
 }
@@ -44,6 +46,33 @@ input {
   height: 60rpx;
   position: absolute;
   top: 20rpx;
+  left: 0;
+  padding-left: 30rpx;
+}
+
+.province {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 180rpx;
+  left: 0;
+  padding-left: 30rpx;
+}
+
+.area {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 280rpx;
+  left: 0;
+  padding-left: 30rpx;
+}
+
+.city {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  top: 380rpx;
   left: 0;
   padding-left: 30rpx;
 }

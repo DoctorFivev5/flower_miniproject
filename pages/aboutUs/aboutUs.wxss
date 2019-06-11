@@ -1,0 +1,69 @@
+.headBox {
+  height: 400rpx;
+  background-color: #ffffff;
+  border-bottom: 1rpx solid #e2e2e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 175rpx;
+  height: 175rpx;
+  border-radius: 50%;
+}
+
+.authorizeMsg {
+  width: 590rpx;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 58rpx;
+}
+
+.authorizeMsg-team {
+  font-size: 28rpx;
+  color: #333333;
+  line-height: 45rpx;
+  margin-bottom: 32rpx;
+}
+
+.authorizeMsg-command {
+  position: relative;
+  font-size: 22rpx;
+  color: #9c9c9c;
+  height: 20rpx;
+  line-height: 20rpx;
+  padding-left: 34rpx;
+  margin-bottom: 30rpx;
+}
+
+.authorizeMsg-command::before {
+  content: '';
+  height: 10rpx;
+  width: 10rpx;
+  background-color: #9c9c9c;
+  position: absolute;
+  left: 0;
+  bottom: 5rpx;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.authorizeMsg-buttonContent {
+  width: 620rpx;
+  margin: 0 auto;
+  margin-top: 60rpx;
+}
+
+.authorizeMsg-button {
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  background-color: #fcc530;
+}

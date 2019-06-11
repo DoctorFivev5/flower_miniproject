@@ -17,25 +17,25 @@
             <text >{{item.type}}</text>  
           </view>
           <view class="product-container1">
-            <view class="product-container" wx:for="{{item.productList}}" wx:for-item="product" wx:key="Math.random()">
+            <view class="product-container" wx:for="{{item.orderLists}}" wx:for-item="order" wx:key="Math.random()">
               <view class="product">
                 <view class="pic-title"></view>
-                <image class="product-img" src="{{product.image}}" />
+                <image class="product-img" src="{{order.product.image[0]}}" />
               </view>
               <view class="content">
-                <view class="content-title">{{product.name}}</view>
+                <view class="content-title">{{order.product.name}}</view>
                 <view class="product-detail">
-                  <text class="product-money">￥ {{product.money}}</text>
-                  <text class="product-count">x {{product.count}}</text>
+                  <text class="product-money">￥ {{order.product.price}}</text>
+                  <text class="product-count">x {{order.number}}</text>
                 </view>
               </view>
               <view class="product-footer">
                 <view class="product-all">
-                  <text class="count">共{{product.count}}件商品 </text>
-                  <text class="money">合计: ￥<text class="moneyDetail">{{item.total}}</text></text>
+                  <text class="count">共{{item.orderLists.length}}件商品 </text>
+                  <text class="money">合计: ￥<text class="moneyDetail">{{item.price}}</text></text>
                 </view>
                 <view class="button-container">
-                  <button class="delete">删除订单</button>
+                  <button class="delete" bind:tap="delete" data-id="{{item.id}}" >删除订单</button>
                   <button class="delete">查看物流</button>
                   <button class="comment">评价</button>
                 </view>
@@ -50,25 +50,25 @@
             <text >{{item.type}}</text>  
           </view>
           <view class="product-container1">
-            <view class="product-container" wx:for="{{item.productList}}" wx:for-item="product" wx:key="Math.random()">
+            <view class="product-container" wx:for="{{item.orderLists}}" wx:for-item="order" wx:key="Math.random()">
               <view class="product">
                 <view class="pic-title"></view>
-                <image class="product-img" src="{{product.image}}" />
+                <image class="product-img" src="{{order.product.image[0]}}" />
               </view>
               <view class="content">
-                <view class="content-title">{{product.name}}</view>
+                <view class="content-title">{{order.product.name}}</view>
                 <view class="product-detail">
-                  <text class="product-money">￥ {{product.money}}</text>
-                  <text class="product-count">x {{product.count}}</text>
+                  <text class="product-money">￥ {{order.product.price}}</text>
+                  <text class="product-count">x {{order.number}}</text>
                 </view>
               </view>
               <view class="product-footer">
                 <view class="product-all">
-                  <text class="count">共{{product.count}}件商品 </text>
-                  <text class="money">合计: ￥<text class="moneyDetail">{{item.total}}</text></text>
+                  <text class="count">共{{item.orderLists.length}}件商品 </text>
+                  <text class="money">合计: ￥<text class="moneyDetail">{{item.price}}</text></text>
                 </view>
                 <view class="button-container">
-                  <button class="delete">删除订单</button>
+                  <button class="delete" bind:tap="delete" data-id="{{item.id}}" >删除订单</button>
                   <button class="delete">查看物流</button>
                   <button class="comment">评价</button>
                 </view>
@@ -83,25 +83,25 @@
             <text >{{item.type}}</text>  
           </view>
           <view class="product-container1">
-            <view class="product-container" wx:for="{{item.productList}}" wx:for-item="product" wx:key="Math.random()">
+            <view class="product-container" wx:for="{{item.orderLists}}" wx:for-item="order" wx:key="Math.random()">
               <view class="product">
                 <view class="pic-title"></view>
-                <image class="product-img" src="{{product.image}}" />
+                <image class="product-img" src="{{order.product.image[0]}}" />
               </view>
               <view class="content">
-                <view class="content-title">{{product.name}}</view>
+                <view class="content-title">{{order.product.name}}</view>
                 <view class="product-detail">
-                  <text class="product-money">￥ {{product.money}}</text>
-                  <text class="product-count">x {{product.count}}</text>
+                  <text class="product-money">￥ {{order.product.price}}</text>
+                  <text class="product-count">x {{order.number}}</text>
                 </view>
               </view>
               <view class="product-footer">
                 <view class="product-all">
-                  <text class="count">共{{product.count}}件商品 </text>
-                  <text class="money">合计: ￥<text class="moneyDetail">{{item.total}}</text></text>
+                  <text class="count">共{{item.orderLists.length}}件商品 </text>
+                  <text class="money">合计: ￥<text class="moneyDetail">{{item.price}}</text></text>
                 </view>
                 <view class="button-container">
-                  <button class="delete">删除订单</button>
+                  <button class="delete" bind:tap="delete" data-id="{{item.id}}" >删除订单</button>
                   <button class="delete">查看物流</button>
                   <button class="comment">评价</button>
                 </view>
@@ -116,25 +116,25 @@
             <text >{{item.type}}</text>  
           </view>
           <view class="product-container1">
-            <view class="product-container" wx:for="{{item.productList}}" wx:for-item="product" wx:key="Math.random()">
+            <view class="product-container" wx:for="{{item.orderLists}}" wx:for-item="order" wx:key="Math.random()">
               <view class="product">
                 <view class="pic-title"></view>
-                <image class="product-img" src="{{product.image}}" />
+                <image class="product-img" src="{{order.product.image[0]}}" />
               </view>
               <view class="content">
-                <view class="content-title">{{product.name}}</view>
+                <view class="content-title">{{order.product.name}}</view>
                 <view class="product-detail">
-                  <text class="product-money">￥ {{product.money}}</text>
-                  <text class="product-count">x {{product.count}}</text>
+                  <text class="product-money">￥ {{order.product.price}}</text>
+                  <text class="product-count">x {{order.number}}</text>
                 </view>
               </view>
               <view class="product-footer">
                 <view class="product-all">
-                  <text class="count">共{{product.count}}件商品 </text>
-                  <text class="money">合计: ￥<text class="moneyDetail">{{item.total}}</text></text>
+                  <text class="count">共{{item.orderLists.length}}件商品 </text>
+                  <text class="money">合计: ￥<text class="moneyDetail">{{item.price}}</text></text>
                 </view>
                 <view class="button-container">
-                  <button class="delete">删除订单</button>
+                  <button class="delete" bind:tap="delete" data-id="{{item.id}}" >删除订单</button>
                   <button class="delete">查看物流</button>
                   <button class="comment">评价</button>
                 </view>
@@ -149,25 +149,25 @@
             <text >{{item.type}}</text>  
           </view>
           <view class="product-container1">
-            <view class="product-container" wx:for="{{item.productList}}" wx:for-item="product" wx:key="Math.random()">
+            <view class="product-container" wx:for="{{item.orderLists}}" wx:for-item="order" wx:key="Math.random()">
               <view class="product">
                 <view class="pic-title"></view>
-                <image class="product-img" src="{{product.image}}" />
+                <image class="product-img" src="{{order.product.image[0]}}" />
               </view>
               <view class="content">
-                <view class="content-title">{{product.name}}</view>
+                <view class="content-title">{{order.product.name}}</view>
                 <view class="product-detail">
-                  <text class="product-money">￥ {{product.money}}</text>
-                  <text class="product-count">x {{product.count}}</text>
+                  <text class="product-money">￥ {{order.product.price}}</text>
+                  <text class="product-count">x {{order.number}}</text>
                 </view>
               </view>
               <view class="product-footer">
                 <view class="product-all">
-                  <text class="count">共{{product.count}}件商品 </text>
-                  <text class="money">合计: ￥<text class="moneyDetail">{{item.total}}</text></text>
+                  <text class="count">共{{item.orderLists.length}}件商品 </text>
+                  <text class="money">合计: ￥<text class="moneyDetail">{{item.price}}</text></text>
                 </view>
                 <view class="button-container">
-                  <button class="delete">删除订单</button>
+                  <button class="delete" bind:tap="delete" data-id="{{item.id}}" >删除订单</button>
                   <button class="delete">查看物流</button>
                   <button class="comment">评价</button>
                 </view>
@@ -182,25 +182,25 @@
             <text >{{item.type}}</text>  
           </view>
           <view class="product-container1">
-            <view class="product-container" wx:for="{{item.productList}}" wx:for-item="product" wx:key="Math.random()">
+            <view class="product-container" wx:for="{{item.orderLists}}" wx:for-item="order" wx:key="Math.random()">
               <view class="product">
                 <view class="pic-title"></view>
-                <image class="product-img" src="{{product.image}}" />
+                <image class="product-img" src="{{order.product.image[0]}}" />
               </view>
               <view class="content">
-                <view class="content-title">{{product.name}}</view>
+                <view class="content-title">{{order.product.name}}</view>
                 <view class="product-detail">
-                  <text class="product-money">￥ {{product.money}}</text>
-                  <text class="product-count">x {{product.count}}</text>
+                  <text class="product-money">￥ {{order.product.price}}</text>
+                  <text class="product-count">x {{order.number}}</text>
                 </view>
               </view>
               <view class="product-footer">
                 <view class="product-all">
-                  <text class="count">共{{product.count}}件商品 </text>
-                  <text class="money">合计: ￥<text class="moneyDetail">{{item.total}}</text></text>
+                  <text class="count">共{{item.orderLists.length}}件商品 </text>
+                  <text class="money">合计: ￥<text class="moneyDetail">{{item.price}}</text></text>
                 </view>
                 <view class="button-container">
-                  <button class="delete">删除订单</button>
+                  <button class="delete" bind:tap="delete" data-id="{{item.id}}" >删除订单</button>
                   <button class="delete">查看物流</button>
                   <button class="comment">评价</button>
                 </view>
@@ -211,3 +211,6 @@
       </swiper-item>
   </swiper>
 </view>
+
+
+<wxs src="./order.wxs" module="tools"></wxs>

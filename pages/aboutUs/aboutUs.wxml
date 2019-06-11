@@ -1,0 +1,13 @@
+<view>
+  <view class="headBox">
+    <image src="{{avatar}}" class="logo" />
+  </view>
+  <view class="authorizeMsg">
+    <view class="authorizeMsg-team">该小程序由 XXX 小组开发</view>
+    <view class="authorizeMsg-command">自主创新, 主题新颖</view>
+    <view class="authorizeMsg-command">优秀的团队开发</view>
+    <view class="authorizeMsg-command">提供优质的服务</view>
+    <view class="authorizeMsg-command">我们就是要成为最优秀的人</view>
+    <view class="authorizeMsgbefore"></view>
+  </view>
+</view>

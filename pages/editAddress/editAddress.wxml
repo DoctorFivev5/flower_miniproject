@@ -1,16 +1,17 @@
 <form bindsubmit="submit">
   <input type="text" class="name" placeholder="收货人" name="name" />
   <input type="number" class="phone" placeholder="手机号码" name="phone" />
-  <input class="address" placeholder="地址" maxlength="140" name="address" />
-  <input class="province" placeholder="省份" name="province" />
+  <input placeholder="省份" name="province" />
+  <input placeholder="区" name="area" />
   <input type="text" placeholder="城市" name="city" />
-  <radio-group name="radio-group">
-    <label><radio value="1"/>是否为默认地址</label>
-  </radio-group>
-  <view style="margin-top: 30rpx" >
-    <!-- <button form-type="submit" class="submit">提交</button> -->
+  <input class="address" placeholder="地址" maxlength="140" name="address" />
+  <view style="margin-top: 100rpx" >
+    <button  form-type="submit" class="submit">提交</button>
   </view>
   <image class="phoneImg" src="/images/phone.png" />
   <image class="addressImg" src="/images/user_address.png" />
   <image class="user" src="/images/icon_mine_press.png" />
+  <image class="province" src="/images/province.png" />
+  <image class="city" src="/images/city.png" />
+  <image class="area" src="/images/area.png" />
 </form>

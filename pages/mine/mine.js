@@ -55,7 +55,7 @@ Page({
         name:"意见反馈"
       },
       {
-        id: "about_us",
+        id: "aboutUs",
         images: "/images/aboutUs.png",
         name:"关于我们"
       }

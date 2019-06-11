@@ -60,12 +60,14 @@
   border: 1px solid	#FF4500;
 }
 
-.edit {
+.delete {
   font-size: 24rpx;
   text-align: center;
   position: relative;
+  color: #FF4500;
 }
-.edit::before {
+
+.delete::before {
   content: '';
   height: 50rpx;
   width: 4rpx;

@@ -22,29 +22,47 @@ Page({
     }
   },
 
-  phoneInput: function(e) {
-    this.setData({
-      phone: e.detail.value
-    })
-  },
-
-  nameInput: function(e) {
-    this.setData({
-      name: e.detail.value
-    })
-  },
-
-  addressInput: function(e) {
-    this.setData({
-      address: e.detail.value
-    })
+  navigateTo: function() {
+    wx.switchTab({
+      url: '../mine/mine',
+    });
   },
 
   submit: function(e) {
-    console.log(e);
-  },
+    const { name, phone, province, city, area, address } = e.detail.value;
+    const userId = wx.getStorageSync('userId');
 
-  formSubmit: function(e) {
-    console.log(e.detail.value);
-  }
+    const data = {
+      userId,
+      name,
+      phone,
+      isDefault: 1,
+      province,
+      city,
+      area,
+      detail: address,
+    };
+
+    var reqTask = wx.request({
+      url: 'http://127.0.0.1/flower/address/addAddress',
+      data,
+      header: {'content-type':'application/json'},
+      method: 'POST',
+      dataType: 'json',
+      responseType: 'text',
+      success: (result)=>{
+        wx.showToast({
+          title: '操作成功',
+          icon: 'success',
+          duration: 1500,
+          mask: true,
+          success: (result)=>{
+            setTimeout(this.navigateTo, 1500);
+          },
+          fail: ()=>{},
+          complete: ()=>{}
+        });
+      }
+    });
+  },
 })

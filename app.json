@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/authorize/authorize",
+    "pages/aboutUs/aboutUs",
     "pages/advice/advice",
     "pages/index/index",
     "pages/editAddress/editAddress",

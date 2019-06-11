@@ -1,0 +1,14 @@
+var count = function (order) {
+  var result = 0;
+  console.log(order);
+  for(var i = 0; i < order.length; i++) {
+    console.log(order[i]);
+    result += order[i].number;
+  }
+
+  return result;
+}
+
+module.exports = {
+  count: count
+}

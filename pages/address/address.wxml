@@ -1,17 +1,17 @@
 <view class="container">
   <view class="address-container" wx:for="{{addressList}}" wx:for-item="item" wx:key="item.info.phone">
-    <view class="address-avator">{{tools.slice(item.info.name)}}</view>
+    <view class="address-avator">{{tools.slice(item.name)}}</view>
     <view class="address-content">
       <view class="info">
-        <text class="name">{{item.info.name}}</text>
-        <text class="phone">{{item.info.phone}}</text>
+        <text class="name">{{item.name}}</text>
+        <text class="phone">{{item.phone}}</text>
       </view>
       <view class="address">
-        <text class="{{item.isDefault ? 'default' : ''}}">{{item.isDefault ? '默认' : ''}}</text>
-        <text class="address-detail">{{item.address}}</text>
+        <text class="{{item.isDefault === 1 ? 'default' : ''}}">{{item.isDefault === 1 ? '默认' : ''}}</text>
+        <text class="address-detail">{{item.detail}}</text>
       </view>
     </view>
-    <view class="edit" data-item="{{item}}" bind:tap="edit" >编辑</view>
+    <view class="delete" data-item="{{item}}" bind:tap="delete" >删除</view>
   </view>
 
   <view class="add" bind:tap="add">
