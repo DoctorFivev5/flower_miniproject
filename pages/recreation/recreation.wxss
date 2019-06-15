@@ -1,1 +1,48 @@
 /* pages/recreation/recreation.wxss */
+page{
+  background-color: #FFFAF0
+}
+.page{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-top: 30rpx
+}
+.title{
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.name{
+  font-size: 30rpx;
+  color:blue
+}
+.upic{
+  width: 50rpx;
+  height:50rpx
+}
+.box{
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  margin-bottom:20rpx 
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  width: 80%
+}
+.user{
+  display: flex;
+  flex-direction: row;
+  align-items: center
+  
+}
+.pic{
+  width: 160rpx;
+  height: 160rpx;
+}
+button{
+  background-color: 	#6495ED
+}

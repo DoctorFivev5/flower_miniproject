@@ -13,7 +13,9 @@
     "pages/project/project",
     "pages/recreation/recreation",
     "pages/flower/flower",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/content/content",
+    "pages/creatContent/creatContent"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -42,7 +44,7 @@
         "selectedIconPath": "images/icon_recreation_press.png",
         "iconPath": "images/icon_recreation.png",
         "pagePath": "pages/recreation/recreation",
-        "text": "扩展"
+        "text": "动态"
       },
       {
         "selectedIconPath": "images/icon_shop_press.png",

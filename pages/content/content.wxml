@@ -1,0 +1,10 @@
+<!--pages/content/content.wxml-->
+<view>
+</view>
+<view>{{list.title}}</view>
+<view>{{list.user}}</view>
+<view>{{list.content1}}</view>
+<view>{{list.content2}}</view>
+<view>{{list.content3}}</view>
+<view>{{list.content4}}</view>
+<view><image src='{{list.pic}}'></image></view>

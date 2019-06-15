@@ -1,2 +1,23 @@
 <!--pages/recreation/recreation.wxml-->
-<text>pages/recreation/recreation.wxml</text>
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<button bindtap='toCreat'>写帖子</button>
+<view class='page'>
+  <view  wx:for="{{list}}" class='box' bindtap='toContent' data-title='{{item.title}}'>
+  <view class='text'>
+    <view class='title'>{{item.title}}</view>
+      <view class='user'>
+        <image src='{{item.upic}}' class='upic'></image>
+        <view class='name'>{{item.user}}</view>
+      </view>
+    <view class='name'>{{item.content}}</view>
+  </view>
+    <image src='{{item.pic}}' class='pic'></image>
+  </view>
+</view>

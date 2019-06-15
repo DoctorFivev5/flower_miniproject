@@ -1,0 +1,16 @@
+<!--pages/createContent/creatContent.wxml-->
+<form bindsubmit='formSubmit'>
+  <view class='inner'>
+    <label>标题</label>
+    <input></input>
+  </view>
+  <view class='inner'>
+    <label>正文</label>
+    <textarea maxlength='400'></textarea>
+  </view>
+  <view class='inner'>
+    <label>上传图片</label>
+    <image src='/images/paizhao.png' class='icon' bindtap='uploadPic'></image>
+  </view>
+  <button form-type='submit' type='primary'>提交</button>
+</form>

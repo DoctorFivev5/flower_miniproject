@@ -3,7 +3,7 @@
     <image src="{{avatar}}" class="logo" />
   </view>
   <view class="authorizeMsg">
-    <view class="authorizeMsg-team">该小程序由 XXX 小组开发,向其提供以下权限即可继续操作</view>
+    <view class="authorizeMsg-team">该小程序由fafa小组开发,向其提供以下权限即可继续操作</view>
     <view class="authorizeMsg-command">获取你的公开信息(昵称、头像等)</view>
     <view class="authorizeMsgbefore"></view>
   </view>
