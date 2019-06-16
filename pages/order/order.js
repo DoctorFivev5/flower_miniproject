@@ -18,7 +18,7 @@ Page({
     const userId = wx.getStorageSync('userId');
 
     var reqTask = wx.request({
-      url: 'http://127.0.0.1/flower/order/getOrderByType',
+      url: 'http://127.0.0.1:8080/flower/order/getOrderByType',
       data: {
         userId,
       },
@@ -103,7 +103,7 @@ Page({
     const { id } = e.currentTarget.dataset;
 
     var reqTask = wx.request({
-      url: 'http://127.0.0.1/flower/order/deleteOrder',
+      url: 'http://127.0.0.1:8080/flower/order/deleteOrder',
       data: {
         orderId: id
       },

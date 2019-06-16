@@ -9,7 +9,7 @@ Page({
     const userId = wx.getStorageSync('userId');
 
     var reqTask = wx.request({
-      url: 'http://127.0.0.1/flower/address/getAddress',
+      url: 'http://127.0.0.1:8080/flower/address/getAddress',
       data: {
         userId
       },
@@ -35,7 +35,7 @@ Page({
     const { id } = e.currentTarget.dataset.item;
     
     var reqTask = wx.request({
-      url: 'http://127.0.0.1/flower/address/deleteAddress',
+      url: 'http://127.0.0.1:8080/flower/address/deleteAddress',
       data: {
         id
       },

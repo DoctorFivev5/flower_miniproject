@@ -58,6 +58,6 @@ App({
   globalData: {
     userInfo: null,
     myUserInfo:null,
-    baseUrl: "http://localhost/flower"//"http://192.168.0.1/flower"
+    baseUrl: "http://localhost:8080/flower"//"http://192.168.0.1/flower"
   }
 })

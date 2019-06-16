@@ -22,7 +22,7 @@ Page({
     }
 
     var reqTask = wx.request({
-      url: 'http://127.0.0.1/flower/feedback/addFeedback',
+      url: 'http://127.0.0.1:8080/flower/feedback/addFeedback',
       data,
       header: {'content-type':'application/json'},
       method: 'POST',

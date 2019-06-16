@@ -4,7 +4,7 @@ const app = getApp()
 var util = require('../../utils/util.js');
 Page({
   data: {
-    imgUrls: ["http://localhost/flower/image/meigui.jpg","http://localhost/flower/image/meigui.jpg"],
+    imgUrls: ["http://localhost:8080/flower/image/meigui.jpg","http://localhost:8080/flower/image/meigui.jpg"],
     week: "周一",
     indicatorDots: true, //是否显示面板指示点
     autoplay: true, //是否自动切换

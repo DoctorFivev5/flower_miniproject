@@ -44,7 +44,7 @@ Page({
     };
 
     var reqTask = wx.request({
-      url: 'http://127.0.0.1/flower/address/addAddress',
+      url: 'http://127.0.0.1:8080/flower/address/addAddress',
       data,
       header: {'content-type':'application/json'},
       method: 'POST',
